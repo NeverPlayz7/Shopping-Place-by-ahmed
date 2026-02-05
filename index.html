@@ -1,35 +1,57 @@
-<audio id="clickSound" src="https://assets.mixkit.co/sfx/preview/mixkit-game-click-1114.mp3"></audio>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Market</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyped Shopping Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Particles.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
-<canvas id="particles"></canvas>
 <body>
+    <!-- Particle background -->
+    <div id="particles-js"></div>
 
- <header class="header">
-  <h1>🛒 My Market</h1>
-  <p>Buy • Sell • Enjoy Shopping</p>
-</header>
+    <!-- Header -->
+    <header>
+        <h1>HypedShop</h1>
+        <p>Experience shopping like never before 🚀</p>
+    </header>
 
-  <section class="products">
-    <div class="product">
-      <h2>Product 1</h2>
-      <p>Price: Rs 1000</p>
-      <button onclick="addToCart('Product 1', 1000)">Add to Cart</button>
-    </div>
+    <!-- Products section -->
+    <section class="products">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Product 1">
+            <h3>Cool Sneakers</h3>
+            <p>Step up your game with these amazing sneakers.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Product 2">
+            <h3>Smart Watch</h3>
+            <p>Track your fitness and stay connected in style.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Product 3">
+            <h3>Gaming Headset</h3>
+            <p>Immersive sound for epic gaming sessions.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Product 4">
+            <h3>Hoodie</h3>
+            <p>Comfortable, stylish hoodie for every day.</p>
+            <button>Add to Cart</button>
+        </div>
+    </section>
 
-    <div class="product">
-      <h2>Product 2</h2>
-      <p>Price: Rs 1500</p>
-      <button onclick="addToCart('Product 2', 1500)">Add to Cart</button>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 HypedShop. All Rights Reserved.
+    </footer>
 
-<section class="cart">
-  <h2>🧾 Cart</h2>
-  <ul id="cart-list"></ul>
-  <h3>Total: Rs <span id="total">0</span></h3>
-</section>
+    <script src="script.js"></script>
+</body>
+</html>
