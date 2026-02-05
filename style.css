@@ -1,45 +1,31 @@
-/* Slider Container */
-.slider-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  gap: 10px;
-  padding: 0 40px;
-}
-
-/* Slider Buttons */
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  background: rgba(0,0,0,0.6);
-  color: #00ffe4;
-  border: none;
-  font-size: 2rem;
-  padding: 10px 15px;
-  border-radius: 50%;
+/* Product hover zoom + glow */
+.product-card {
+  transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
-  transition: 0.3s;
 }
-.slider-btn:hover {
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 255, 228, 0.7);
+}
+
+/* Add to Cart button pop effect */
+.product-card button {
+  transition: transform 0.3s, background 0.3s;
+}
+.product-card button:hover {
+  transform: scale(1.15);
   background: #00bdb2;
-  transform: translateY(-50%) scale(1.2);
 }
 
-.left-btn { left: 10px; }
-.right-btn { right: 10px; }
-
-/* Product slider */
+/* Infinite loop slider container */
+.slider-container {
+  overflow: hidden;
+  position: relative;
+}
 .product-slider {
   display: flex;
   gap: 30px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 20px 0;
+  transition: transform 0.5s ease;
 }
 
-.product-slider::-webkit-scrollbar {
-  display: none; /* hide scrollbar */
-}
+/* Arrows remain same */
