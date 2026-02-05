@@ -40,51 +40,18 @@ body {
 }
 
 /* ===== PRODUCTS ===== */
-.product,
-.cart {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.3);
-}
-.product::before {
-  content: "";
-  position: relative;
-  inset: -2px;
-  background: linear-gradient(45deg, #00c853, #64dd17, #00c853);
-  filter: blur(18px);
-  opacity: 0;
-  transition: 0.3s;
-  z-index: -1;
-}
-
-.product:hover::before {
-  opacity: 0.8;
-}
-
-
 .product {
-  background: white;
+  position: relative;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
   width: 260px;
-  padding: 25px;
-  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 25px rgba(0,255,200,0.25);
+  transition: 0.4s ease;
 }
 
-.product:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 25px 45px rgba(0,0,0,0.2);
-}
-
-.product h2 {
-  margin-bottom: 10px;
-}
-
-.product p {
-  margin-bottom: 15px;
-  font-weight: 500;
-}
 
 /* ===== BUTTON ===== */
 button {
@@ -98,9 +65,9 @@ button {
   transition: all 0.3s ease;
 }
 
-button:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(0,200,83,0.5);
+.product:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,200,0.9);
 }
 
 /* ===== CART ===== */
