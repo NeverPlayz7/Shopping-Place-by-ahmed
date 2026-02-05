@@ -6,9 +6,11 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #e0eafc, #cfdef3);
   color: #222;
 }
+
 
 /* ===== HEADER ===== */
 .header {
@@ -30,13 +32,27 @@ body {
 }
 
 /* ===== PRODUCTS ===== */
-.products {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin: 50px auto;
-  flex-wrap: wrap;
+.product,
+.cart {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
 }
+.product::before {
+  content: "";
+  position: relative;
+  inset: -2px;
+  background: linear-gradient(45deg, #00c853, #64dd17, #00c853);
+  filter: blur(18px);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.product:hover::before {
+  opacity: 0.8;
+}
+
 
 .product {
   background: white;
@@ -115,4 +131,8 @@ button:hover {
   .product {
     width: 90%;
   }
+}@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
